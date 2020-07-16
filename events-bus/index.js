@@ -10,10 +10,10 @@ const events = [];
 app.post("/events", (req, res) => {
   const event = req.body;
   events.push(event);
-  Axios.post(`http://localhost:4000/events`, event);
-  Axios.post(`http://localhost:4001/events`, event);
-  Axios.post(`http://localhost:4002/events`, event);
-  Axios.post(`http://localhost:4003/events`, event);
+  Axios.post(`http://posts-clusterip-srv:4000/events`, event);
+  Axios.post(`http://comments-srv:4001/events`, event);
+  Axios.post(`http://query-srv:4002/events`, event);
+  Axios.post(`http://moderation-srv:4003/events`, event);
 
   res.send({ status: "OK" });
 });
