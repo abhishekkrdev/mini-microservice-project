@@ -5,7 +5,7 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchLables:
+    matchLabels:
       app: moderation
   template:
     metadata:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: moderation
-          image: abhishekkr/moderation
+          image: abhishekkr95dev/moderation
 
 ---
 apiVersion: v1

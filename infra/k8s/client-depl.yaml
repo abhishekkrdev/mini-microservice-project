@@ -5,7 +5,7 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchLables:
+    matchLabels:
       app: client
   template:
     metadata:
@@ -14,8 +14,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: abhishekkr/client
-
+          image: abhishekkr95dev/client
 ---
 apiVersion: v1
 kind: Service
@@ -24,7 +23,6 @@ metadata:
 spec:
   selector:
     app: client
-  type: ClusterIP
   ports:
     - name: client
       protocol: TCP

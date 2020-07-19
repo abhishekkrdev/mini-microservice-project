@@ -8,7 +8,7 @@ build:
   local:
     push: false
   artifacts:
-    - image: stephengrider/client
+    - image: abhishekkr95dev/client
       context: client
       docker:
         dockerfile: Dockerfile
@@ -16,7 +16,7 @@ build:
         manual:
           - src: "src/**/*.js"
             dest: .
-    - image: stephengrider/comments
+    - image: abhishekkr95dev/comments
       context: comments
       docker:
         dockerfile: Dockerfile
@@ -24,37 +24,35 @@ build:
         manual:
           - src: "*.js"
             dest: .
-    - image: stephengrider/event-bus
+    - image: abhishekkr95dev/event-bus
       context: event-bus
       docker:
-          dockerfile: Dockerfile
+        dockerfile: Dockerfile
       sync:
-          manual:
+        manual:
           - src: "*.js"
-              dest: .
-    - image: stephengrider/moderation
+            dest: .
+    - image: abhishekkr95dev/moderation
       context: moderation
       docker:
-          dockerfile: Dockerfile
+        dockerfile: Dockerfile
       sync:
-          manual:
+        manual:
           - src: "*.js"
-              dest: .
-    - image: stephengrider/query
+            dest: .
+    - image: abhishekkr95dev/query
       context: query
       docker:
-          dockerfile: Dockerfile
+        dockerfile: Dockerfile
       sync:
-          manual:
+        manual:
           - src: "*.js"
-              dest: .
-    - image: stephengrider/posts
+            dest: .
+    - image: abhishekkr95dev/posts
       context: posts
       docker:
-          dockerfile: Dockerfile
+        dockerfile: Dockerfile
       sync:
-          manual:
+        manual:
           - src: "*.js"
-              dest: .
-    
-          
+            dest: .

@@ -5,7 +5,7 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchLables:
+    matchLabels:
       app: posts
   template:
     metadata:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: posts
-          image: abhishekkr/posts
+          image: abhishekkr95dev/posts
 ---
 apiVersion: v1
 kind: Service
